@@ -5,7 +5,9 @@ class CustomerService {
   constructor() {}
 
   async find() {
-    const rta = await models.Customer.findAll();
+    const rta = await models.Customer.findAll({
+      include: ['user']
+    });
     return rta;
   }
 
