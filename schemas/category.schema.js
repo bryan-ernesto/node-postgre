@@ -3,6 +3,7 @@ const Joi = require('joi');
 const id = Joi.number().integer();
 const name = Joi.string().min(3).max(15);
 const image = Joi.string().uri();
+const productId = Joi.number().integer();
 
 const createCategorySchema = Joi.object({
   name: name.required(),
